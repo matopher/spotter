@@ -41,11 +41,11 @@
 
                 <div class="mt-4">
                 <h3 class="text-md mb-4 uppercase tracking-wide">Lists</h3>
-                <ul class="list-reset">
-                    @foreach($lists as $list)
-                        <li class="mb-3"> {{ $list['name'] }} ({{ $list['stats']['member_count'] }})</li>
-                    @endforeach
-                </ul>
+                    <ul class="list-reset">
+                        @foreach($lists as $list)
+                            <li class="mb-3"> {{ $list['name'] }} ({{ $list['stats']['member_count'] }})</li>
+                        @endforeach
+                    </ul>
                 </div>
                 
                 <div class="text-center py-8">
@@ -57,6 +57,14 @@
                       </div>
                   </div>
 
+                <div class="mt-4">
+                <h3 class="text-md mb-4 uppercase tracking-wide">Top Pages Last 30 Days</h3>
+                    <ul class="list-reset">
+                        @foreach($topPages as $page)
+                            <li class="mb-3"> <strong>{{ $page['pageViews'] }}</strong> Views - {{ $page['url'] }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </body>
