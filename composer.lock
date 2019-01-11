@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5697b6b0ce0bcc8e95697c8bb85c39f1",
+    "content-hash": "2c3a9d7672954ff2c6785d4c9ebef4b0",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -208,6 +208,48 @@
                 "schedule"
             ],
             "time": "2018-06-06T03:12:17+00:00"
+        },
+        {
+            "name": "drewm/drip",
+            "version": "v0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drewm/drip.git",
+                "reference": "2f5ebe46dbf82fe16186b8f488ec47a0dd672e37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drewm/drip/zipball/2f5ebe46dbf82fe16186b8f488ec47a0dd672e37",
+                "reference": "2f5ebe46dbf82fe16186b8f488ec47a0dd672e37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DrewM\\Drip\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Drew McLellan",
+                    "email": "drew.mclellan@gmail.com"
+                }
+            ],
+            "description": "PHP library for interacting with the Drip API",
+            "keywords": [
+                "drip"
+            ],
+            "time": "2018-03-27T13:12:31+00:00"
         },
         {
             "name": "drewm/mailchimp-api",
