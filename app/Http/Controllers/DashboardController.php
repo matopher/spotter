@@ -12,8 +12,8 @@ class DashboardController extends Controller
     {
         $mailchimp = new MailchimpController;
         $subscribers = $mailchimp->getTotalSubscriberCount();
-        $rawLists = $mailchimp->getLists();
-        $lists = collect($rawLists)->map->name;
+        $lists = $mailchimp->getLists();
+        // $lists = collect($rawLists)->map->name;
         // dd($lists);
         
         return view('dashboard', [

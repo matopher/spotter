@@ -32,10 +32,9 @@
                 </h1>
                 <div class="text-center py-8">
                       <div class="text-grey-darker mb-2">
-                        <span class="text-3xl align-top"><span class="text-green align-top">+</span>
                         <span class="text-5xl">{{ $subscribers }}</span>
                       </div>
-                      <div class="text-sm uppercase text-grey tracking-wide">
+                      <div class="text-sm uppercase text-grey-dark tracking-wide">
                           Email Subscribers
                       </div>
                   </div>
@@ -44,7 +43,7 @@
                 <h3 class="text-md mb-4 uppercase tracking-wide">Lists</h3>
                 <ul class="list-reset">
                     @foreach($lists as $list)
-                        <li class="mb-3"> {{ $list }}</li>
+                        <li class="mb-3"> {{ $list['name'] }} ({{ $list['stats']['member_count'] }})</li>
                     @endforeach
                 </ul>
                 </div>
