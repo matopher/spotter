@@ -9,6 +9,7 @@ use \DrewM\MailChimp\Webhook;
 class MailchimpController extends Controller
 {
     private $details;
+    private $lists;
 
     public function __construct()
     {
@@ -16,8 +17,10 @@ class MailchimpController extends Controller
         $MailChimp = new MailChimp($mailchimp_api_key);
 
         $account_details = $MailChimp->get('/');
+        $lists = $MailChimp->get('lists');
 
         $this->details = $account_details;
+        $this->lists = $lists['lists'];
     }
 
     public function getDetails()
@@ -30,5 +33,10 @@ class MailchimpController extends Controller
         $total_subscriber_count = $this->details['total_subscribers'];
 
         return $total_subscriber_count;
+    }
+
+    public function getLists()
+    {
+        return $this->lists;
     }
 }
