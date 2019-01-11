@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('mailchimp', 'MailchimpWebhookController@getDetails');
 
-Route::get('drip', 'DripController@getAllSubscribers');
+Route::get('drip', 'DripController@index');

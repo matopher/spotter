@@ -35,7 +35,7 @@
                         <span class="text-5xl">{{ $subscribers }}</span>
                       </div>
                       <div class="text-sm uppercase text-grey-dark tracking-wide">
-                          Email Subscribers
+                          Mailchimp Email Subscribers
                       </div>
                   </div>
 
@@ -48,6 +48,15 @@
                 </ul>
                 </div>
                 
+                <div class="text-center py-8">
+                      <div class="text-grey-darker mb-2">
+                        <span class="text-5xl">{{ $dripTotalSubscribers }}</span>
+                      </div>
+                      <div class="text-sm uppercase text-grey-dark tracking-wide">
+                          Drip Email Subscribers
+                      </div>
+                  </div>
+
             </div>
         </div>
     </body>
