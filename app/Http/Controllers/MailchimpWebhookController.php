@@ -8,22 +8,26 @@ use \DrewM\MailChimp\Webhook;
 
 class MailchimpWebhookController extends Controller
 {
-    public function handle()
+    private $details;
+
+    public function __construct()
     {
         $mailchimp_api_key = strval(env('MAILCHIMP_API_KEY'));
         $MailChimp = new MailChimp($mailchimp_api_key);
 
         $account_details = $MailChimp->get('/');
 
-        // return $account_details;
-        $payload = $this->getTotalSubscriberCount($account_details);
-
-        dd($payload);
+        $this->details = $account_details;
     }
 
-    public function getTotalSubscriberCount($account_details)
+    public function handle()
     {
-        $total_subscriber_count = $account_details['total_subscribers'];
+        return $this->details;
+    }
+
+    public function getTotalSubscriberCount()
+    {
+        $total_subscriber_count = $this->details['total_subscribers'];
 
         return $total_subscriber_count;
     }
