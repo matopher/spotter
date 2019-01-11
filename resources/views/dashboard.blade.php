@@ -59,9 +59,10 @@
 
                 <div class="mt-4">
                 <h3 class="text-md mb-4 uppercase tracking-wide">Top Pages Last 30 Days</h3>
+                <div class="text-sm mb-3 uppercase tracking-wide">Views</div>
                     <ul class="list-reset">
                         @foreach($topPages as $page)
-                            <li class="mb-3"> <strong>{{ $page['pageViews'] }}</strong> Views - <a href="https://mattwoods.io{{ $page['url'] }}" class="text-blue">{{ $page['url'] }}</a></li>
+                            <li class="mb-3"> <strong>{{ $page['pageViews'] }}</strong> <a href="https://mattwoods.io{{ $page['url'] }}" class="text-blue ml-4">{{ $page['url'] }}</a></li>
                         @endforeach
                     </ul>
                 </div>
