@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use \DrewM\MailChimp\MailChimp;
 use \DrewM\MailChimp\Webhook;
 
-class MailchimpWebhookController extends Controller
+class MailchimpController extends Controller
 {
     private $details;
 
@@ -20,7 +20,7 @@ class MailchimpWebhookController extends Controller
         $this->details = $account_details;
     }
 
-    public function handle()
+    public function getDetails()
     {
         return $this->details;
     }
